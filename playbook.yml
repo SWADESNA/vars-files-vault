@@ -1,0 +1,21 @@
+---
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "{{ greeting }}"
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
+    - name: continent 1
+      debug:
+        msg: "{{ Continents [1] }}"
+    - name: continent array 
+      debug: 
+        msg: "{{ item }}"
+      with_items:
+        - "{{ Continents }}"
+    - name: display my nick
+      debug:
+        msg: my name is "{{ nick_name }}"
